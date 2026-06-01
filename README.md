@@ -1,7 +1,7 @@
 # PhysInfer: An Unsupervised Framework for Adaptive Inference of Single-Cell Transcriptional Bursting Dynamics via Physics-Constrained Neural Networks
 -------------------
 
-![PhysInfer Graphical Abstract](images/figure1.png)
+![PhysInfer Graphical Abstract](figure1.png)
 
 ### Framework Overview
 
