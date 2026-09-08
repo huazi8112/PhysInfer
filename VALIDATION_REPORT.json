@@ -1,0 +1,69 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "completed_real_genes_473": true,
+    "initial_stable_K2_223": true,
+    "initial_stable_K3_22": true,
+    "initial_ambiguous_228": true,
+    "final_stable_K2_223": true,
+    "final_formal_K3_20": true,
+    "final_ambiguous_230": true,
+    "selective_total_48": true,
+    "selective_called_27": true,
+    "selective_coverage_0p5625": true,
+    "selective_accuracy_1": true,
+    "roc_units_400": true,
+    "roc_auc_0p978": true,
+    "focused_uq_genes_7": true,
+    "focused_uq_700_completed": true,
+    "secondary_bic_total_2137": true,
+    "secondary_bic_2state_1765": true,
+    "secondary_bic_3state_372": true,
+    "secondary_bic_fraction_17p4pct": true,
+    "secondary_bic_cluster_files_8": true,
+    "secondary_bic_source_rows_2161": true,
+    "secondary_bic_unresolved_rows_24": true,
+    "secondary_bic_resolved_rows_2137": true,
+    "secondary_bic_gene_level_2state_1765": true,
+    "secondary_bic_gene_level_3state_372": true,
+    "secondary_bic_gene_names_unique": true
+  },
+  "initial_counts": {
+    "ambiguous": 228,
+    "K2": 223,
+    "K3": 22
+  },
+  "final_role_counts": {
+    "ambiguous": 230,
+    "stable_K2": 223,
+    "formal_K3": 20
+  },
+  "secondary_bic_counts": {
+    "BIC-based 2-state preference": 1765,
+    "BIC-based 3-state preference": 372
+  },
+  "secondary_bic_gene_level_source": {
+    "cluster_files": 8,
+    "rows_by_file": {
+      "cluster_0_identification_results.csv": 142,
+      "cluster_1_identification_results.csv": 276,
+      "cluster_2_identification_results.csv": 574,
+      "cluster_3_identification_results.csv": 86,
+      "cluster_4_identification_results.csv": 194,
+      "cluster_5_identification_results.csv": 35,
+      "cluster_6_identification_results.csv": 488,
+      "cluster_7_identification_results.csv": 366
+    },
+    "total_rows": 2161,
+    "unresolved_rows": 24,
+    "resolved_rows": 2137,
+    "state_counts": {
+      "2": 1765,
+      "3": 372
+    },
+    "unique_gene_names": 2161,
+    "duplicate_gene_names": 0,
+    "confidence_min": 1.0,
+    "confidence_max": 1.0
+  }
+}

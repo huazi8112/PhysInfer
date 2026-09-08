@@ -1,0 +1,5 @@
+fold_tolerance,n_conditions_with_at_least_one_passing_grid_point,min_condition_specific_largest_passing_pon,max_condition_specific_largest_passing_pon,important_note
+1.2,1,0.2,0.2,A missing value means the direct estimator did not satisfy the requested fold tolerance at any tested P_on in that observation condition. Do not convert missing values into zero.
+1.3,2,0.35,0.4,A missing value means the direct estimator did not satisfy the requested fold tolerance at any tested P_on in that observation condition. Do not convert missing values into zero.
+1.4,3,0.175,0.4,A missing value means the direct estimator did not satisfy the requested fold tolerance at any tested P_on in that observation condition. Do not convert missing values into zero.
+1.5,4,0.075,0.45,A missing value means the direct estimator did not satisfy the requested fold tolerance at any tested P_on in that observation condition. Do not convert missing values into zero.

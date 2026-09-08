@@ -1,0 +1,9 @@
+{
+  "scope": "Completed 473-gene subset from interrupted v7.6 all-eligible run; not a random transcriptome sample and not valid for transcriptome-wide prevalence claims.",
+  "n_genes": 243,
+  "median_max_abs_cdf_difference": 0.040382487976983295,
+  "q90_max_abs_cdf_difference": 0.07734015463833167,
+  "median_total_variation": 0.09715491378802663,
+  "label": "descriptive full-data goodness-of-fit only",
+  "warning": "These CDF metrics use the same full-data observations used for final kinetic fitting; they are not held-out validation and do not establish microscopic identifiability."
+}

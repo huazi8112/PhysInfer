@@ -1,0 +1,37 @@
+{
+  "scope": "First 473 genes completing all 30 required repetitions in frozen eligible-manifest order; not a random transcriptome sample and not valid for transcriptome-wide prevalence claims.",
+  "n_completed": 473,
+  "initial_model_order_counts": {
+    "stable_K2": 223,
+    "stable_K3": 22,
+    "ambiguous": 228
+  },
+  "split_matched_confirmation": {
+    "initial_K3_candidates_tested": 22,
+    "formal_K3_retained": 20,
+    "returned_to_ambiguous": 2,
+    "threshold_70_30": 0.0028715757
+  },
+  "final_role_counts": {
+    "stable_K2": 223,
+    "formal_K3": 20,
+    "ambiguous": 230
+  },
+  "downstream_kinetic_panel": 243,
+  "neural_restarts": [101, 202, 303],
+  "restart_selection": "lowest model-specific stationary NLL among completed neural restarts",
+  "max_recorded_best_restart_boundary_mass": 3.295372696880345e-7,
+  "group_medians": {
+    "stable_K2_BS": 3.8820582370741854,
+    "stable_K2_BF": 1.1639437906125751,
+    "formal_K3_BS": 6.124538421677466,
+    "formal_K3_BF": 1.321776289110153
+  },
+  "guardrails": [
+    "Ambiguous genes are not force-routed for formal kinetic interpretation.",
+    "K3 support is for an effective sequential higher-order representation, not a unique microscopic topology.",
+    "Cross-gene BS/BF patterns do not establish a dominant regulatory strategy.",
+    "Full-data CDF metrics are descriptive goodness-of-fit diagnostics, not held-out validation."
+  ]
+}
+

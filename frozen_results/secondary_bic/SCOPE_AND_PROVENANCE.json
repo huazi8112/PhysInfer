@@ -1,0 +1,14 @@
+{
+  "analysis": "secondary full-cohort BIC-plus-veto model-order preference",
+  "qc_retained_genes": 2137,
+  "bic_based_2state_preference": 1765,
+  "bic_based_3state_preference": 372,
+  "role": "descriptive model-order preference; does not overwrite held-out stable or ambiguous calls",
+  "provenance": "manuscript-locked aggregate",
+  "source_files": "frozen_results/secondary_bic/gene_level_clusters/cluster_0_identification_results.csv through cluster_7_identification_results.csv",
+  "source_rows": 2161,
+  "rows_without_predicted_state": 24,
+  "resolved_gene_level_rows": 2137,
+  "gene_level_table_in_release": true,
+  "note": "The eight original cluster tables are retained unchanged. After excluding the 24 rows with missing predicted_state, the 2137 resolved rows contain 1765 2-state and 372 3-state preferences. gene_index is cluster-local; gene_name is unique across the eight files."
+}

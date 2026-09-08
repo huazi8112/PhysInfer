@@ -1,0 +1,17 @@
+{
+  "analysis_unit": "independent parameter unit",
+  "n_independent_units": 400,
+  "n_K2": 240,
+  "n_K3": 160,
+  "units_per_observation_regime": 100,
+  "repetitions_per_unit": 30,
+  "label_phase_repetitions": 20,
+  "evaluation_phase_repetitions": 10,
+  "auc": 0.978,
+  "ci95": [0.965, 0.989],
+  "bootstrap_draws": 20000,
+  "bootstrap_unit": "complete parameter unit",
+  "bootstrap_stratification": ["effective order", "observation regime"],
+  "note": "The 400 parameter units, not the 12000 repeated held-out gains, are the independent ROC observations."
+}
+
