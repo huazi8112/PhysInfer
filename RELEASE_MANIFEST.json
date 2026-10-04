@@ -2,7 +2,7 @@
   "release": "2026-10-04",
   "archive_root": "code/",
   "file_count": 96,
-  "total_bytes": 32622541,
+  "total_bytes": 32624319,
   "files_by_top_level_entry": {
     "README.md": 1,
     "RESULT_LOCK.json": 1,
@@ -262,8 +262,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14508,
-      "sha256": "d6c0221b46f29674ebbd1b2267d196798b637fdf92f2a4fb1f3043faa4ae7f6e"
+      "bytes": 16286,
+      "sha256": "155bf7d59c488069edddf99e405c991e9ed5f2fabdf10da2983ae9023dcb446b"
     },
     {
       "path": "reproduced_figures/loss_ablation_summary.pdf",
