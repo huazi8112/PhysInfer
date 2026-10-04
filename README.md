@@ -130,13 +130,13 @@ python scripts/verify_release_hashes.py
 
 ### 5.1 真实计数矩阵
 
-`data/processed_GSE176044_gene_by_cell.csv` 是 gene-by-cell 矩阵：2,162 个基因、413 个细胞，第一列为基因名，`-1` 表示缺失观测，共 40,131 个。
+`data/processed_MEF_gene_by_cell.csv` 是 processed MEF gene-by-cell UMI 矩阵：2,162 个基因、413 个 allele-specific profiles，第一列为基因名，`-1` 表示缺失观测，共 40,131 个。该矩阵来自 Luo et al. 的公开处理资源，并由 Larsson et al. 报道的 C57 和 CAST allele-resolved UMI profiles 构建；对应论文引用为 [14] 和 [41]。
 
 ```bash
-python scripts/prepare_real_data.py data/processed_GSE176044_gene_by_cell.csv --output check_real_data
+python scripts/prepare_real_data.py data/processed_MEF_gene_by_cell.csv --output check_real_data
 ```
 
-在 `n_finite >= 200` 且 `max_finite_count <= 300` 的数值预检查规则下，held-out 分析得到 2,135 个 eligible genes。该范围与下述 2,137 个 BIC 有效结果属于不同分析入口，不应直接互换。
+在 `n_finite >= 200` 且 `max_finite_count <= 300` 的数值预检查规则下，held-out 分析得到 2,135 个 eligible genes。该范围与下述 2,137 个 secondary BIC analysis set 属于并行分析入口：前者用于 held-out model-order evaluation，后者用于 Fig. 5D 和 Fig. S1 的 nominal BIC preference。
 
 ### 5.2 八个分群 BIC 逐基因结果
 
@@ -223,15 +223,15 @@ python scripts/run_selective_panel_48_cv20.py --smoke --output smoke_selective_c
 
 ```bash
 python scripts/run_real_model_order.py \
-  data/processed_GSE176044_gene_by_cell.csv \
-  check_real_data/eligible_genes.csv \
+  data/processed_MEF_gene_by_cell.csv \
+  check_real_data/eligible_manifest_2135.csv \
   condition_matched_k2_null_gains.csv \
   --output real_model_order --n-genes 2135 --repeats 30 --eta 1.0 --seed 2026
 ```
 
 `condition_matched_k2_null_gains.csv` 必须与真实分析使用相同的细胞数、捕获设置和训练/测试拆分。脚本会按基因保存中间结果。
 
-冻结的 computationally completed cohort 包含完成全部 30 次预设重复的前 473 个基因；它是计算完成队列，不是新的生物学筛选层。初始结果为 223 stable 2-state、22 initial 3-state 和 228 ambiguous。
+冻结的 473-gene model-selection subset 包含在 frozen manifest order 中完成全部 30 次预设重复的前 473 个基因。初始结果为 223 stable 2-state、22 initial 3-state 和 228 ambiguous。
 
 ### 7.2 70/30 split-matched 确认
 
@@ -247,7 +247,7 @@ python scripts/confirm_initial_k3_70_30.py \
 
 ```bash
 python scripts/infer_routed_kinetics.py \
-  data/processed_GSE176044_gene_by_cell.csv \
+  data/processed_MEF_gene_by_cell.csv \
   frozen_results/real_data/FINAL_MODEL_ORDER_ROLES_473.csv \
   --output routed_kinetics --epochs 2000 --seeds 101 202 303
 ```
@@ -276,7 +276,7 @@ python scripts/run_loss_ablation.py counts_k3.npy \
 
 ```bash
 python scripts/run_k3_bootstrap_uq.py \
-  data/processed_GSE176044_gene_by_cell.csv genes.txt \
+  data/processed_MEF_gene_by_cell.csv genes.txt \
   --output k3_bootstrap_uq --bootstraps 100 --eta 1.0 --seed 2026
 ```
 
@@ -312,7 +312,7 @@ python scripts/reproduce_figures.py --results frozen_results --output reproduced
 | 400 单元 ROC 汇总 | `frozen_results/validation/roc_n400_summary.json` |
 | 48 单元 selective policy | `frozen_results/validation/selective_policy_48_units.csv` |
 | 八个 BIC 逐基因分群表 | `frozen_results/secondary_bic/gene_level_clusters/` |
-| BIC 全队列汇总 | `frozen_results/secondary_bic/full_cohort_preference_summary.csv` |
+| 2,137 基因 BIC 汇总 | `frozen_results/secondary_bic/full_cohort_preference_summary.csv` |
 | 473 基因最终角色 | `frozen_results/real_data/FINAL_MODEL_ORDER_ROLES_473.csv` |
 | 243 基因 BS/BF | `frozen_results/real_data/FINAL_LOWEST_NLL_NEURAL_ESTIMATES.csv` |
 | 7 基因 UQ | `frozen_results/focused_K3_UQ/` |

@@ -24,7 +24,7 @@ def main() -> None:
         records.append({"path": relative, "bytes": path.stat().st_size, "sha256": digest})
     top_level = Counter(record["path"].split("/", 1)[0] for record in records)
     manifest = {
-        "release": "2026-09-08",
+        "release": "2026-10-04",
         "archive_root": "code/",
         "file_count": len(records),
         "total_bytes": sum(int(record["bytes"]) for record in records),

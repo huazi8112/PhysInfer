@@ -1,9 +1,9 @@
 {
-  "analysis": "secondary full-cohort BIC-plus-veto model-order preference",
-  "qc_retained_genes": 2137,
+  "analysis": "secondary BIC-plus-veto model-order preference across the 2,137-gene analysis set",
+  "secondary_bic_analysis_genes": 2137,
   "bic_based_2state_preference": 1765,
   "bic_based_3state_preference": 372,
-  "role": "descriptive model-order preference; does not overwrite held-out stable or ambiguous calls",
+  "role": "descriptive nominal model-order preference; does not overwrite calibrated held-out assignments",
   "provenance": "manuscript-locked aggregate",
   "source_files": "frozen_results/secondary_bic/gene_level_clusters/cluster_0_identification_results.csv through cluster_7_identification_results.csv",
   "source_rows": 2161,

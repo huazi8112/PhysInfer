@@ -1,5 +1,5 @@
 {
-  "release": "2026-09-08 manuscript-aligned repository package",
+  "release": "2026-10-04 data-provenance-corrected repository package",
   "notation": {
     "K3_states": ["OFF1", "OFF2", "ON"],
     "latent_labels": ["G0", "G1", "G2"],
@@ -29,23 +29,23 @@
     "selective_accuracy": 1.0
   },
   "real_data": {
-    "processed_matrix": "processed mESC count matrix associated with GSE176044",
+    "processed_matrix": "processed MEF UMI matrix derived from allele-resolved C57 and CAST profiles",
     "matrix_shape": [2162, 413],
     "minus_one_missing_entries": 40131,
     "heldout_numerical_eligible_genes": 2135,
-    "secondary_BIC_QC_retained_genes": 2137,
+    "secondary_BIC_analysis_genes": 2137,
     "secondary_BIC_2state_preference": 1765,
     "secondary_BIC_3state_preference": 372,
     "secondary_BIC_source_rows": 2161,
     "secondary_BIC_rows_without_state": 24,
     "secondary_BIC_gene_level_provenance_in_release": true,
-    "completed_cohort": 473,
+    "model_selection_subset": 473,
     "stable_K2": 223,
     "initial_stable_K3": 22,
     "formal_K3_after_split_matched_confirmation": 20,
     "ambiguous_final": 230,
     "downstream_kinetic_panel": 243,
-    "completed_cohort_warning": "The first 473 computationally completed genes are not a prevalence sample."
+    "model_selection_scope": "The first 473 genes completing all 30 repetitions in frozen manifest order."
   },
   "focused_K3_UQ": {
     "genes": 7,

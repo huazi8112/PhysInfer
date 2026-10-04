@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reconstruct the frozen eligible manifest from the processed GSE176044 matrix."""
+"""Reconstruct the frozen held-out eligibility manifest from the processed MEF matrix."""
 
 from __future__ import annotations
 
@@ -49,7 +49,7 @@ def main() -> None:
         "missing_minus_one_entries": missing_entries,
         "n_eligible": int(manifest.eligible.sum()),
         "eligibility": "n_finite >= 200 and max_finite_count <= 300",
-        "completed_cohort_rule": "first 473 genes completing all 30 repetitions in frozen manifest order",
+        "model_selection_subset_rule": "first 473 genes completing all 30 repetitions in frozen manifest order",
     }
     (args.output / "preflight_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(summary)

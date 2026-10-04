@@ -1,5 +1,5 @@
 {
-  "scope": "Completed 473-gene subset from interrupted v7.6 all-eligible run; not a random transcriptome sample and not valid for transcriptome-wide prevalence claims.",
+  "scope": "In-sample CDF metrics for the 243-gene resolved kinetic panel derived from the 473-gene model-selection subset.",
   "n_genes": 243,
   "median_max_abs_cdf_difference": 0.040382487976983295,
   "q90_max_abs_cdf_difference": 0.07734015463833167,

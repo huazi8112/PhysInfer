@@ -59,8 +59,8 @@ def plot_model_order(root: Path, output: Path) -> None:
     fig, ax = plt.subplots(figsize=(5.8, 4.2))
     bars = ax.bar(["Stable K2", "Formal K3", "Ambiguous"], counts, color=["#4477AA", "#CC6677", "#BBBBBB"])
     ax.bar_label(bars)
-    ax.set_ylabel("Completed genes")
-    ax.set_title("Completed cohort (N=473)")
+    ax.set_ylabel("Genes")
+    ax.set_title("473-gene model-selection subset")
     save(fig, output, "real_data_model_order_flow")
 
 
@@ -111,8 +111,8 @@ def plot_secondary_bic(root: Path, output: Path) -> None:
         text.set_fontweight("bold")
     labels = [f"{name}\nN={count}" for name, count in zip(frame.preference, counts)]
     ax.legend(wedges, labels, loc="lower center", bbox_to_anchor=(0.5, -0.14), frameon=False)
-    ax.text(0, 0, "Secondary BIC-plus-veto\nQC-retained genes\n(N = 2,137)", ha="center", va="center")
-    ax.set_title("Full-Cohort Model-Order Preferences from Secondary BIC Analysis")
+    ax.text(0, 0, "Secondary BIC-plus-veto\nanalysis set\n(N = 2,137)", ha="center", va="center")
+    ax.set_title("Nominal Model-Order Preferences from Secondary BIC Analysis")
     save(fig, output, "secondary_bic_full_cohort_preferences")
 
 

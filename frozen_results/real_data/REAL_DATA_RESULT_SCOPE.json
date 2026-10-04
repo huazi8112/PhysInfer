@@ -1,5 +1,5 @@
 {
-  "scope": "First 473 genes completing all 30 required repetitions in frozen eligible-manifest order; not a random transcriptome sample and not valid for transcriptome-wide prevalence claims.",
+  "scope": "First 473 genes completing all 30 required repetitions in frozen eligible-manifest order.",
   "n_completed": 473,
   "initial_model_order_counts": {
     "stable_K2": 223,
@@ -34,4 +34,3 @@
     "Full-data CDF metrics are descriptive goodness-of-fit diagnostics, not held-out validation."
   ]
 }
-
